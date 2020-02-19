@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		14895CBB23FCFABD007C0E1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14895CBA23FCFABD007C0E1C /* AppDelegate.swift */; };
-		14895CBD23FCFABD007C0E1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14895CBC23FCFABD007C0E1C /* SceneDelegate.swift */; };
 		14895CBF23FCFABD007C0E1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14895CBE23FCFABD007C0E1C /* ViewController.swift */; };
 		14895CC223FCFABD007C0E1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14895CC023FCFABD007C0E1C /* Main.storyboard */; };
 		14895CC423FCFAC0007C0E1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14895CC323FCFAC0007C0E1C /* Assets.xcassets */; };
@@ -29,7 +28,6 @@
 /* Begin PBXFileReference section */
 		14895CB723FCFABD007C0E1C /* VKChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14895CBA23FCFABD007C0E1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		14895CBC23FCFABD007C0E1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		14895CBE23FCFABD007C0E1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		14895CC123FCFABD007C0E1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14895CC323FCFAC0007C0E1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				14895CBA23FCFABD007C0E1C /* AppDelegate.swift */,
-				14895CBC23FCFABD007C0E1C /* SceneDelegate.swift */,
 				14895CBE23FCFABD007C0E1C /* ViewController.swift */,
 				14895CC023FCFABD007C0E1C /* Main.storyboard */,
 				14895CC323FCFAC0007C0E1C /* Assets.xcassets */,
@@ -202,7 +199,6 @@
 			files = (
 				14895CBF23FCFABD007C0E1C /* ViewController.swift in Sources */,
 				14895CBB23FCFABD007C0E1C /* AppDelegate.swift in Sources */,
-				14895CBD23FCFABD007C0E1C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZB2PMQN3C6;
 				INFOPLIST_FILE = VKChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,7 +369,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.kirillvarlamov.VKChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -383,6 +380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZB2PMQN3C6;
 				INFOPLIST_FILE = VKChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,7 +388,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.kirillvarlamov.VKChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141C7F5D23FD032A00542513 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141C7F5C23FD032A00542513 /* ChatListViewController.swift */; };
+		141C7F5F23FD035600542513 /* ChatListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141C7F5E23FD035600542513 /* ChatListPresenter.swift */; };
+		141C7F6123FD036800542513 /* ChatListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141C7F6023FD036800542513 /* ChatListModel.swift */; };
+		141C7F6323FD157900542513 /* TableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141C7F6223FD157900542513 /* TableViewManager.swift */; };
+		1454BC0823FCFD940044DEFF /* ChatListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1454BC0723FCFD940044DEFF /* ChatListAssembly.swift */; };
 		14895CBB23FCFABD007C0E1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14895CBA23FCFABD007C0E1C /* AppDelegate.swift */; };
 		14895CBF23FCFABD007C0E1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14895CBE23FCFABD007C0E1C /* ViewController.swift */; };
 		14895CC223FCFABD007C0E1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14895CC023FCFABD007C0E1C /* Main.storyboard */; };
 		14895CC423FCFAC0007C0E1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14895CC323FCFAC0007C0E1C /* Assets.xcassets */; };
 		14895CC723FCFAC0007C0E1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14895CC523FCFAC0007C0E1C /* LaunchScreen.storyboard */; };
 		14895CD223FCFAC0007C0E1C /* VKChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14895CD123FCFAC0007C0E1C /* VKChatTests.swift */; };
+		95A71D4AC0242497A78CE838 /* Pods_VKChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2832CBEE6B51BF5A4FA0D15 /* Pods_VKChatTests.framework */; };
+		B9EAED28C29DB4FB47299420 /* Pods_VKChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495C32F64D9DC14DF3BF777D /* Pods_VKChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1344E8B2CC5D799B7611A41D /* Pods-VKChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKChat/Pods-VKChat.debug.xcconfig"; sourceTree = "<group>"; };
+		141C7F5C23FD032A00542513 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		141C7F5E23FD035600542513 /* ChatListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListPresenter.swift; sourceTree = "<group>"; };
+		141C7F6023FD036800542513 /* ChatListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListModel.swift; sourceTree = "<group>"; };
+		141C7F6223FD157900542513 /* TableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewManager.swift; sourceTree = "<group>"; };
+		1454BC0723FCFD940044DEFF /* ChatListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListAssembly.swift; sourceTree = "<group>"; };
 		14895CB723FCFABD007C0E1C /* VKChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14895CBA23FCFABD007C0E1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14895CBE23FCFABD007C0E1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +49,11 @@
 		14895CCD23FCFAC0007C0E1C /* VKChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14895CD123FCFAC0007C0E1C /* VKChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKChatTests.swift; sourceTree = "<group>"; };
 		14895CD323FCFAC0007C0E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		495C32F64D9DC14DF3BF777D /* Pods_VKChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FC21967932DCE9C5446A63B /* Pods-VKChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKChatTests/Pods-VKChatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		79A845DE67223D8AF0CBB75A /* Pods-VKChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKChatTests/Pods-VKChatTests.release.xcconfig"; sourceTree = "<group>"; };
+		B2832CBEE6B51BF5A4FA0D15 /* Pods_VKChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF0369829F29A5DEA2E168C6 /* Pods-VKChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKChat/Pods-VKChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9EAED28C29DB4FB47299420 /* Pods_VKChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +69,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A71D4AC0242497A78CE838 /* Pods_VKChatTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1454BC0623FCFD6A0044DEFF /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				1454BC0723FCFD940044DEFF /* ChatListAssembly.swift */,
+				141C7F5C23FD032A00542513 /* ChatListViewController.swift */,
+				141C7F5E23FD035600542513 /* ChatListPresenter.swift */,
+				141C7F6023FD036800542513 /* ChatListModel.swift */,
+				141C7F6223FD157900542513 /* TableViewManager.swift */,
+			);
+			path = ChatList;
+			sourceTree = "<group>";
+		};
 		14895CAE23FCFABD007C0E1C = {
 			isa = PBXGroup;
 			children = (
 				14895CB923FCFABD007C0E1C /* VKChat */,
 				14895CD023FCFAC0007C0E1C /* VKChatTests */,
 				14895CB823FCFABD007C0E1C /* Products */,
+				33ED8E133CF5065D22063C1D /* Pods */,
+				A194EA155FEB2D4E38F1C671 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +111,7 @@
 		14895CB923FCFABD007C0E1C /* VKChat */ = {
 			isa = PBXGroup;
 			children = (
+				1454BC0623FCFD6A0044DEFF /* ChatList */,
 				14895CBA23FCFABD007C0E1C /* AppDelegate.swift */,
 				14895CBE23FCFABD007C0E1C /* ViewController.swift */,
 				14895CC023FCFABD007C0E1C /* Main.storyboard */,
@@ -96,6 +131,26 @@
 			path = VKChatTests;
 			sourceTree = "<group>";
 		};
+		33ED8E133CF5065D22063C1D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1344E8B2CC5D799B7611A41D /* Pods-VKChat.debug.xcconfig */,
+				BF0369829F29A5DEA2E168C6 /* Pods-VKChat.release.xcconfig */,
+				6FC21967932DCE9C5446A63B /* Pods-VKChatTests.debug.xcconfig */,
+				79A845DE67223D8AF0CBB75A /* Pods-VKChatTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A194EA155FEB2D4E38F1C671 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				495C32F64D9DC14DF3BF777D /* Pods_VKChat.framework */,
+				B2832CBEE6B51BF5A4FA0D15 /* Pods_VKChatTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14895CD623FCFAC0007C0E1C /* Build configuration list for PBXNativeTarget "VKChat" */;
 			buildPhases = (
+				8EC84E38EB820B61D8ABB645 /* [CP] Check Pods Manifest.lock */,
 				14895CB323FCFABD007C0E1C /* Sources */,
 				14895CB423FCFABD007C0E1C /* Frameworks */,
 				14895CB523FCFABD007C0E1C /* Resources */,
+				2984947BB9B69B50597CBDB8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +177,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14895CD923FCFAC0007C0E1C /* Build configuration list for PBXNativeTarget "VKChatTests" */;
 			buildPhases = (
+				05E7CECBD179F5A3A5217899 /* [CP] Check Pods Manifest.lock */,
 				14895CC923FCFAC0007C0E1C /* Sources */,
 				14895CCA23FCFAC0007C0E1C /* Frameworks */,
 				14895CCB23FCFAC0007C0E1C /* Resources */,
@@ -192,12 +250,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05E7CECBD179F5A3A5217899 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VKChatTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2984947BB9B69B50597CBDB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VKChat/Pods-VKChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKChat/Pods-VKChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EC84E38EB820B61D8ABB645 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VKChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		14895CB323FCFABD007C0E1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1454BC0823FCFD940044DEFF /* ChatListAssembly.swift in Sources */,
+				141C7F5F23FD035600542513 /* ChatListPresenter.swift in Sources */,
 				14895CBF23FCFABD007C0E1C /* ViewController.swift in Sources */,
+				141C7F6323FD157900542513 /* TableViewManager.swift in Sources */,
+				141C7F6123FD036800542513 /* ChatListModel.swift in Sources */,
+				141C7F5D23FD032A00542513 /* ChatListViewController.swift in Sources */,
 				14895CBB23FCFABD007C0E1C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +478,7 @@
 		};
 		14895CD723FCFAC0007C0E1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1344E8B2CC5D799B7611A41D /* Pods-VKChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -375,6 +498,7 @@
 		};
 		14895CD823FCFAC0007C0E1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF0369829F29A5DEA2E168C6 /* Pods-VKChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +518,7 @@
 		};
 		14895CDA23FCFAC0007C0E1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FC21967932DCE9C5446A63B /* Pods-VKChatTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -416,6 +541,7 @@
 		};
 		14895CDB23FCFAC0007C0E1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79A845DE67223D8AF0CBB75A /* Pods-VKChatTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

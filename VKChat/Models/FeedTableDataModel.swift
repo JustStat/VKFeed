@@ -9,6 +9,6 @@
 import Foundation
 
 struct FeedTableDataModule {
-    let groups: [Group]
-    let posts: [Post]
+    var groups: [Group]
+    var posts: [Post]
 }

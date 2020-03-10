@@ -16,10 +16,9 @@ private let userFields = ["first_name", "last_name", "status", "photo_50"]
 final class VKSDKManager: NSObject {
     static let shared = VKSDKManager()
     
-    private var authController: UIViewController?
-    
     var authCompletionBlock: (() -> ())?
     var authFailBlock: ((Error) -> ())?
+    var authNeedPresentController: ((UIViewController) -> ())?
     
     override init() {
         super.init()
@@ -53,10 +52,9 @@ final class VKSDKManager: NSObject {
         })
     }
     
-    func getWall(withOffset: Int, completionBlock: @escaping (FeedTableDataModule) -> (), errorBlock: @escaping (Error) -> ()) {
-        VKApi.request(withMethod: "newsfeed.get", andParameters: [:])?.execute(resultBlock: { (response) in
+    func getWall(withOffset offset: Int, completionBlock: @escaping (FeedTableDataModule) -> (), errorBlock: @escaping (Error) -> ()) {
+        VKApi.request(withMethod: "newsfeed.get", andParameters: ["start_from": offset])?.execute(resultBlock: { (response) in
             if let dict = response?.json as? Dictionary<String, Any> {
-                UserDefaults.standard.value(forKey: "Data")
                 let groups = self.prepareGroups(json: dict)
                 let posts = self.preparePosts(json: dict)
 
@@ -71,13 +69,6 @@ final class VKSDKManager: NSObject {
     
     func logOutUser() {
         VKSdk.forceLogout()
-    }
-    
-    func presentAuthControllerIfNeeded(with controller: UIViewController) {
-        if let authController = authController {
-            controller.present(authController, animated: true, completion: nil)
-            self.authController = nil
-        }
     }
 }
 
@@ -126,7 +117,7 @@ extension VKSDKManager: VKSdkDelegate {
 
 extension VKSDKManager: VKSdkUIDelegate {
     func vkSdkShouldPresent(_ controller: UIViewController!) {
-        authController = controller
+        authNeedPresentController?(controller)
     }
     
     func vkSdkNeedCaptchaEnter(_ captchaError: VKError!) {

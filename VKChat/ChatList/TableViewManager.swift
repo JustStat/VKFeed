@@ -12,6 +12,8 @@ class ChatListTableViewDataSource: NSObject, UITableViewDataSource {
     private static let chatListCellIdentifier = "ChatListCell"
     private static let userInfoCellIdentifier = "UserInfoCell"
     
+    var tableDidScrollToBottom: (() -> ())?
+    
     var items = FeedTableDataModule(groups: [], posts: [])
     var userInfo = User(id: 0, photo: "", firstName: "", lastName: "", status: "")
     
@@ -48,24 +50,34 @@ extension ChatListTableViewDataSource: UITableViewDelegate {
         }
     }
     
-    private func calculateHeightForRow(at indexPath: IndexPath, width: CGFloat) -> CGFloat {
-        let post = items.posts[indexPath.row]
-        
-        var imageHeight: CGFloat = 0
-        if
-            let originalWidth = post.attachements?.photos?.first?.width,
-            let originalHeight = post.attachements?.photos?.first?.height
-        {
-            let aspect = width / CGFloat(originalWidth)
-            imageHeight = CGFloat(originalHeight) * aspect + 20
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y + 20 >= (scrollView.contentSize.height - scrollView.frame.size.height) {
+            tableDidScrollToBottom?()
         }
-               
-        
-        var textHeight: CGFloat = 0
-        if let postText = post.text, postText != "" {
-            textHeight = postText.height(withConstrainedWidth: width - 40, font: UIFont.systemFont(ofSize: 14)) + 20
-        }
-        
-        return imageHeight + textHeight + (imageHeight + textHeight == 0 ? 0 : 50)
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat { 500 }
+}
+
+private extension ChatListTableViewDataSource {
+    func calculateHeightForRow(at indexPath: IndexPath, width: CGFloat) -> CGFloat {
+           let post = items.posts[indexPath.row]
+           
+           var imageHeight: CGFloat = 0
+           if
+               let originalWidth = post.attachements?.photos?.first?.width,
+               let originalHeight = post.attachements?.photos?.first?.height
+           {
+               let aspect = width / CGFloat(originalWidth)
+               imageHeight = CGFloat(originalHeight) * aspect + 20
+           }
+                  
+           
+           var textHeight: CGFloat = 0
+           if let postText = post.text, postText != "" {
+               textHeight = postText.height(withConstrainedWidth: width - 40, font: UIFont.systemFont(ofSize: 14)) + 20
+           }
+           
+           return imageHeight + textHeight + (imageHeight + textHeight == 0 ? 0 : 50)
     }
 }

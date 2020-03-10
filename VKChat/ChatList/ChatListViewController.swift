@@ -14,6 +14,7 @@ protocol ChatListViewInput: AnyObject {
     func updateView(withItems items: FeedTableDataModule)
     func updateUserInfoView(with user: User)
     func showError(error: Error)
+    func presentAuthController(controller: UIViewController)
 }
 
 class ChatListViewController: UIViewController, ChatListViewInput {
@@ -29,13 +30,22 @@ class ChatListViewController: UIViewController, ChatListViewInput {
         configureConstraints()
         
         dataSource = ChatListTableViewDataSource(tableView: chatsTable)
+        dataSource.tableDidScrollToBottom = { [weak self] in
+            self?.presenter.loadMorePosts()
+        }
+        
         chatsTable.dataSource = dataSource
         chatsTable.delegate = dataSource
+        chatsTable.separatorStyle = .none
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.viewWillAppear()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        presenter.viewDidAppear()
     }
     
     func configureConstraints() {
@@ -61,5 +71,9 @@ class ChatListViewController: UIViewController, ChatListViewInput {
         alertController.addAction(restartAction)
         
         present(alertController, animated: true, completion: nil)
+    }
+    
+    func presentAuthController(controller: UIViewController) {
+        present(controller, animated: true, completion: nil)
     }
 }

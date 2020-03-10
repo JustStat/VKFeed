@@ -8,6 +8,7 @@
 
 import UIKit
 import Swinject
+import VK_ios_sdk
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,9 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let assembler = Assembler([ChatListAssembly()])
         window?.rootViewController = assembler.resolver.resolve(ChatListViewInput.self) as? UIViewController
-        
         window?.makeKeyAndVisible()
+        
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        VKSdk.processOpen(url, fromApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String)
     }
 }
 

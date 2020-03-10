@@ -10,13 +10,43 @@ import Foundation
 
 protocol ChatListViewOutput {
     var view: ChatListViewInput! {get set}
-    func loadChatList()
+    func viewWillAppear()
+    func retryAuth()
 }
 
 class ChatListPresenter: ChatListViewOutput {
     unowned var view: ChatListViewInput!
     
-    func loadChatList() {
-        view.updateView(withItems: ["sadsd", "sadsd", "sadsd", "sadsd"])
+    func viewWillAppear() {
+        VKSDKManager.shared.authCompletionBlock = handleSucesfullAuth
+        VKSDKManager.shared.authFailBlock = handleFailAuth(error:)
+        checkAuth()
+    }
+    
+    func retryAuth() {
+        checkAuth()
+    }
+}
+
+private extension ChatListPresenter {
+    func checkAuth() {
+        VKSDKManager.shared.checkSessionStatus(completionBlock: handleSucesfullAuth, errorBlock: handleFailAuth(error:))
+    }
+    
+    func getCurrentUserInfo() {
+        VKSDKManager.shared.getCurrentUserInfo(completionBlock: view.updateUserInfoView(with:), errorBlock: view.showError(error:))
+    }
+    
+    func getNewsfeed(withOffset offset: Int) {
+        VKSDKManager.shared.getWall(withOffset: offset, completionBlock: view.updateView(withItems:), errorBlock: self.view.showError(error:))
+    }
+    
+    func handleSucesfullAuth() {
+        self.getCurrentUserInfo()
+        self.getNewsfeed(withOffset: 0)
+    }
+    
+    func handleFailAuth(error: Error) {
+        self.view.showError(error: error)
     }
 }

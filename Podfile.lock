@@ -1,20 +1,24 @@
 PODS:
   - PureLayout (3.1.4)
   - Swinject (2.5.0)
+  - VK-ios-sdk (1.4.6)
 
 DEPENDENCIES:
   - PureLayout
   - Swinject
+  - VK-ios-sdk
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - PureLayout
     - Swinject
+    - VK-ios-sdk
 
 SPEC CHECKSUMS:
   PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
+  VK-ios-sdk: 7fd48bc5aaa6b96c3197c1987eb6593f2ea67331
 
-PODFILE CHECKSUM: c1c28ce701808c0fefc29cfda915a676092c5fd9
+PODFILE CHECKSUM: 8da6db0daf023e3fd1f9ac63a04c7fb6e195e92d
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.8.4
